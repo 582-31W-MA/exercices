@@ -12,6 +12,6 @@ Faites attention de bien faire ces modifications sur votre environnement de dév
 4. Publiez vos changements sur le serveur de développement du Collège.
 5. Une fois que vous et votre pair avez complétez les étapes ci-haut, écrivez la première entrée de votre journal de bord à l'aide du CMS de votre pair.
 
-### Bonus
+## Bonus
 
 Une fois votre première entrée publiée sur le site Web de votre pair, vous pouvez continuer à modifier les templates de votre site Web afin de rendre ce dernier à votre goût (ou au goût votre l'utilisateur·rice).
