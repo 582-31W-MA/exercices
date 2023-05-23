@@ -1,0 +1,69 @@
+# EXERCICE 1
+---
+name: Alice
+age: 25
+email: alice@example.com
+pets:
+  dog: Buddy
+  cat: Mittens
+
+# EXERCICE 2
+---
+- name: John
+  age: 30
+- name: Sarah
+  age: 25
+- name: Bob
+  age: 40
+
+# EXERCICE 3
+---
+name: David
+age: 35
+address:
+  street: 456 Oak Ave
+  city: San Francisco
+  state: CA
+  zip: '94102'
+
+# EXERCICE 4
+---
+name: Mark
+age: 42
+books:
+  - title: The Great Gatsby
+    author: F. Scott Fitzgerald
+  - title: To Kill a Mockingbird
+    author: Harper Lee
+  - title: '1984'
+    author: George Orwell
+
+# EXERCICE 5
+---
+name: Sam
+age: 27
+contact:
+  email: sam@example.com
+  phone:
+    home: 555-1234
+    work: 555-5678
+education:
+  degree: Bachelor of Science
+  major: Computer Science
+  courses:
+    - name: Data Structures
+      credits: 4
+      instructor:
+        name: Dr. Smith
+        email: smith@example.com
+        phone:
+          home: 555-4321
+          work: 555-8765
+    - name: Algorithms
+      credits: 4
+      instructor:
+        name: Dr. Johnson
+        email: johnson@example.com
+        phone:
+          home: 555-9876
+          work: 555-5432
