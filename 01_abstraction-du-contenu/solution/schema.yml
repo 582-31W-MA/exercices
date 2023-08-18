@@ -1,0 +1,16 @@
+- sections:
+    - plats:
+        - plat: &plat
+            - nom #string
+            - quantité #string
+            - prix #int
+            - favoris #bool
+            - ingrédients:
+                - ingrédient #string
+    - section:
+        - description:
+        - sous-sections:
+            - sous-section:
+                - descriptions #string
+                - plats:
+                    - plat: *plat
