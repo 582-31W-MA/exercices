@@ -1,0 +1,34 @@
+Title: Why I Must Write Readable Programs
+
+----
+
+Author: Donald E. Knuth
+
+---
+
+Date: 1992-01-01
+
+----
+
+Text:
+
+Computer programs are fun to write, and well-written computer programs are fun to read. One of life's greatest pleasures can be the composition of a computer program that you know will be a pleasure for other people to read, and for yourself to read.
+Computer programs can also do useful work. One of life's greatest sources of satisfaction is the knowledge that something you have created is contributing to the progress of welfare of society.
+
+Some people even get paid for writing computer programs! Programming can therefore be triply rewarding---on aesthetic, humanitarian, and economic grounds.
+
+Of course I don't mean to imply that programming is easy. Easy things are often amusing and relaxing, but their value soon fades. Greater pleasure, deeper satisfaction, and higher wages are associated with genuine accomplishments, with the successful fulfillment of a challenging task.
+
+I have spent a good deal of my life trying to help make computer programming as rewarding as possible, in all three senses. At first, I thought programming was primarily analogous to musical composition---to the creation of intricate patterns, which are meant to be performed. But lately I have come to realize that a far better analogy is available: Programming is best regarded as the process of creating works of literature, which are meant to be read.
+
+Literature of the program genre is performable by machines, but that is not its main purpose. The computer programs that are truly beautiful, useful, and profitable must be readable by people. So we ought to address them to people, not to machines. All of the major problems associated with computer programming---issues of reliability, portability, learnability, maintainability, and efficiency---are ameliorated when programs and their dialogs with users become more literate.
+
+...
+
+Literate programming is still a fairly new concept, still in its infancy, still undergoing much-needed experimentation. Many people have contributed important ideas and independent approaches to the creation of systems that improve on WEB in various ways. In this book I describe the techniques that have worked best for me, but I have never imagined that any of my ideas would be the "last word" in any sense. I am sure that people with differing tastes will prefer a system that differs from my own initial attempts.
+
+The time is on ripe for second-generation systems that integrate literate programming into complete programming environments.
+
+----
+
+Source: https://web.archive.org/web/20170605163729/http://www.desy.de/user/projects/LitProg/Philosophy.html

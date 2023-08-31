@@ -1,0 +1,102 @@
+Title: Literate Programming -- Propaganda and Tools
+
+----
+
+Date: 2000-03-16 11:34
+
+----
+
+Author: Chris Lee
+
+----
+
+Source: https://web.archive.org/web/20170603045917/http://vasc.ri.cmu.edu:80/old_help/Programming/Literate/literate.html
+
+----
+
+Text:
+
+## Overview
+
+### A Rationale for literate programming
+
+Literate programming is an approach to programming which emphasises that programs should be written to be read by people as well as compilers. From a purist standpoint, a program could be considered a publishable-quality document that argues mathematically for its own correctness. A different approach is that a program could be a document that teaches programming to the reader through its own example. A more casual approach to literate programming would be that a program should be documented at least well enough that someone could maintain the code properly and make informed changes in a reasonable amount of time without direct help from the author. At the most casual level, a literate program should at least make its own workings plain to the author of the program so that at least the author can easily maintain the code over its lifetime.
+
+#### The problem
+
+Why is this a Good Thing? I suppose it depends on how you feel about programming. In some sense, if one is up against a deadline for getting code finished and working, trying to make a literate program instead of a working program might seem like a very bad idea. However, in a long-term project (code you don't plan to throw away in the near future), literate programming actually seems to pay off (although I have never seen a study to this effect). Why can this style of program development be beneficial?
+
+
+- I have heard that in companies that write computer software, about 10% of the hours spent of software development is spent writing and 90% is spent doing maintaining, debugging, and documenting the code.
+- Computer programs are generally more difficult to read than to write (even one's own code is often difficult to read after it hasn't been looked at for a while).
+- Software that is not internally or externally documented tends to be thrown-away or rewritten after the person that has written it leaves the organization (it is often thrown-away even if it is documented).
+- It is often more difficult to reuse software someone else has written then to rewrite it your self because it is hard to figure-out how it works.
+- In practice, debugging often takes the place of understanding how programs work (ie. if we all understood perfectly how our own code worked we would not need to debug it to find out why it is not doing what we think it should).
+
+One element of programming that leads to the problems listed above is that programming languages are designed more for encouraging people to write code for a compiler to understand than for other people to understand. This is particularly true for those of us who write in the C language, which is very much a low-level language and is often considered to be a portable and easy-to-use assembly language with some nice standard libraries. One nice aspect of C (besides pointers, etc...) is that it is very terse and thus it requires very few keystrokes to implement very powerful ideas. The price for this terseness is it often tends to make code more difficult to read by people. As the problems above indicate to me, this is probably a case where the cost often outweighs the benefits over the course of a long-term development effort (see the April fool's article from Computerworld). Of course, some people do write readable C programs, but it is definately a hard-learned skill rather than any widespread natural ability.
+
+#### One Solution
+
+**Literate programming** is defined as the combination of documentation and source together in a fashion suited for reading by human beings.
+
+This very general definition seems to me to indicate that it is one way to begin to address the difficulties with programming that I indicated in the previous section. I discovered literate programming about two years ago, and have not found too many other people (at least that I know of) who use this `programming methodology', but I suspect that its use is not too uncommon in general. The Getting Start(l)ed document in the Literate Programming Library gives an introduction to the thinking behind literate programming.
+
+Donald Knuth (interview on CWEB, "Why I Must Write Readable Programs") coined the term literate programming and created the original literate programming tool/language, WEB, which he used to write TeX and MetaFont. The literate-programming FAQ quotes Knuth as saying
+
+> The philosophy behind WEB is that an experienced system programmer, who wants to provide the best possible documentation of his or her software products, needs two things simultaneously: a language like TeX for formatting, and a language like C for programming. Neither type of language can provide the best documentation by itself; but when both are appropriately combined, we obtain a system that is much more useful than either language separately.
+
+> The structure of a software program may be thought of as a web that is made up of many interconnected pieces. To document such a program we want to explain each individual part of the web and how it relates to its neighbours. The typographic tools provided by TeX give us an opportunity to explain the local structure of each part by making that structure visible, and the programming tools provided by languages such as C or Fortran make it possible for us to specify the algorithms formally and unambiguously. By combining the two, we can develop a style of programming that maximizes our ability to perceive the structure of a complex piece of software, and at the same time the documented programs can be mechanically translated into a working software system that matches the documentation.
+
+#### Tools
+
+The source code for TeX and MetaFont is available in book format, as printed from the TeX output of the WEB sources for these programs. What I found impressive about these listings (although I did not look at them in too much depth) is that Knuth stated in the introduction to the TeX code that he believed that TeX was finished, and that he believed the last bug had been found and corrected in the code. The fact that I had a hard time conceiving of a truly `finished' program and a truly bug-free program indicated to me (a) that (of course) Dr. Knuth is a far better programmer than I, and (b) that his programming methodology was probably far more reliable than the ones I had previously seen and used.
+
+I have heard (some) about two WEB systems that I have not used, and have used three WEB systems. If anyone has experience with other systems and comments about them, I would like to add that information too. See the LP FAQ for more information on each of these tools (and many other tools). I will try to install some of these tools if people want to try them out.
+
+- WEB (I have not used this system)
+	- Advantages -- the original WEB, used to write TeX and MetaFont, written by Donald Knuth. Tied to Pascal. Provides automated indexing and cross-referencing for identifiers and procedures, pretty-printing of code. Uses TeX as formatter.
+	- Criticisms -- I have heard many criticisms of this system. It only works with PASCAL, it determines the layout of code for you when it prints based on its parsing of the code, many people don't like pretty-printing or disagree with the way WEB handles it. It treats the outputted code as object code and thus does not format it for human-reading, and makes use of debuggers difficult. Powerful, but very complicated to use. Does not integrate cleanly with UNIX MAKE.
+- CWEB (I have not used this system). CWEB is like WEB, but instead of being tied to Pascal, it is tied to C. All the benefits and problems are similar to WEBs. CWEB is currently DEK's favorate programming tool.- FunnelWeb FunnelWeb addresses some of the concerns listed above.
+	- Advantages -- Independent of source language, supports independence of formatter. Can be made to work with a debugger, and provides LaTeX-like document formatting commands for the printed documentation. Easily portable to systems other than UNIX (DOS, Mac, OS/2, VMS, ....). Does not reformat code output like WEB/CWEB. Extremely reliable and solid for large projects. Works well with MAKE.
+	- Criticisms -- No pretty-printing of code (though many including myself consider this a plus).
+- nuweb
+	- Advantages -- Nuweb is extremely simple and portable and fast. It simply provides mechanisms for generating a LaTeX file or a code file from the nuweb source, which makes it like FunnelWeb but much simpler. Most document formatting is done directly with LaTeX commands. Works well with MAKE.
+	- Criticisms -- does not support anything fancy (though this is probably really a plus). Cross-referencing is manual and thus requires some effort.
+- noweb
+	- Advantages -- Noweb is like nuweb, but sacrifices some simplicity and portability for extendibility. This makes it a more featured system because people have contributed extensions. Noweb is able to support features such as pretty printing and automatic referencing and cross-indexing by using filters. The filters supplied with the distributions are mainly written in the Icon language, and need to be compiled by or interpreted by Icon to be used, but the most important filters are also implemented in awk so that noweb will work on most any system that has awk (and you can write your own filters in any language if you want). Noweb also has good support for building html instead of (or along with) LaTeX, so code can be browsed as a cross-referenced document in Mosaic or other html browser. Works (very) well with MAKE.
+	- Criticisms -- extendibility works through pipes, so it is *somewhat* UNIX dependent. Some would argue that more features is a bad thing (after experience with WEB/CWEB). Requires nawk, and/or icon to interpret/compile the filters. Slower than nuweb (in generating formatted documentation), but results are generally worth it.
+
+## Examples
+
+- Literate programming examples from the Literate Programming Library.
+- An Application [PostScript] of CWEB.
+- The Stanford GraphBase is a large collection of programs by Donald Knuth for doing all kinds of computations and games with graphs; it is written in (Levy/Knuth) CWEB. More details in the distribution.
+
+## Cool Stuff
+
+Some ideas:
+
+- Write the user's manual in the same files as the source code so that the manual is never out of date, and serves as a coding guideline.
+- Put screen snapshots of the interface you are writing in the formatted code (using MAKE) so that it is obvious what the code is doing.
+- Put pictures of the results of a image-modication routine in the source code along with the routine (ie. in reading the code for an edge detector, it would be nice to see an example of what it does).
+- Make the Makefile part of the documented code.
+- For C++ code, where the class delarations and definitions of member functions are typically in different places (ie. an xxx.h file and an xxx.cc file), put them in the same nuweb/noweb/FunnelWeb/CWEB file and have that file generate both the .h and the .cc files. Then write about what the purpose of the class is and how it should be used.
+- Put the data-flow graph in the code.
+- For C++ code, put a chart of the class-hierarchy in the source code.
+- Write your ICRA/IROS/AAAI/... paper about your work alongside your source code.
+- Use TeX to write the "paper" versions of the equations your code uses before the C/FORTRAN/LISP/Mathematica versions so that they make sense and can be debugged by inspection of the program-document.
+- Try to document your code instead of running it through the debugger, because you may find what you don't understand about it (and thus possibly whats wrong) through explaining it.
+
+## References
+
+- Literate programming FAQ (latest).
+- Literate Programming Library.
+- Literate programming gopher-library
+- "Literate Programming Simplified",
+- "Literate Programming on a Team Project",
+- Silvio Levy and Donald E. Knuth"CWEB user manual : the CWEB system of structured documentation."
+- E&S-TECH; REPT STNC 1336c.1
+- Donald E. Knuth, "TEX : the program".
+- E&S-BK; 686.22544 K74te c.1
+- Donald E. Knuth, "METAFONT : the program".
+- E&S-BK; 655.24 K74m c.1

@@ -1,0 +1,40 @@
+Title: Literate Programming in Racket
+
+----
+
+Source: https://docs.racket-lang.org/scribble/lp.html
+
+----
+
+Text: 
+
+Programs written using `scribble/lp2` are simultaneously two things: a program and a document describing the program:
+
+When the program is run, all of the `chunk` expressions are collected and stitched together into a program, and the rest of the module is discarded.
+
+When the program is provided to Scribble—or used through `include-section` in another Scribble document with a (submod ...` doc) module path—the entire contents of the module are treated like an ordinary Scribble document, where chunks are typeset in a manner similar to `codeblock`.
+
+For example, consider this program:
+
+```
+#lang scribble/lp2
+@(require scribble/manual)
+ 
+Literate programs have chunks of code, like this one:
+ 
+@chunk[<f>
+       (define (f x)
+         <fs-body>)]
+ 
+and this one:
+ 
+@chunk[<fs-body>
+       (* x x)]
+ 
+that, when assembled, produce a complete program, in this case:
+ 
+@racketblock[(define (f x)
+               (* x x))]
+```
+
+When this file is required in the normal manner, it defines a function f that squares its argument, and the documentation is ignored.
