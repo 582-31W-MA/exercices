@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "CMU";
+    src: url("/assets/fonts/computer-modern-roman.woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CMU";
+    src: url("/assets/fonts/computer-modern-italic.woff");
+    font-style: italic;
+}
+
+body {
+    font-family: "CMU", Georgia, "Times New Roman", Times, serif;
+    font-synthesis: none;
+}

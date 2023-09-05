@@ -1,0 +1,18 @@
+Title: Babel: Active Code in Org
+
+----
+
+Text:
+
+Babel is Org's ability to execute source code within Org documents. If you are not familiar with Org please take a moment to read the Org homepage before continuing. Babel started life as Org-babel, an extension to Org. It was integrated into the Org core at version 7.0. The author of Babel is Eric Schulte. The secondary author is Dan Davison.
+
+- A Multi-Language Computing Environment for Literate Programming and Reproducible Research: a journal paper providing a complete introduction to using Org and Babel for reproducible research and literate programming.
+- Introductory Tutorial: a set of installation and setup instructions, as well as an overview of the main features of Babel with plenty of examples.
+- Babel Documentation: in the Org manual.
+- Language Support: information on requirements, configuration instructions, and language specific documentation for dozens of programming languages.
+- Library of Babel: reusable source code blocks.
+- Uses: user-submitted examples of Babel work flows—this is a good place to get an idea of what Babel can do and see how it might fit into your life. In addition there is a collection of small code block examples and scraps at org-scraps.
+
+----
+
+Source: https://orgmode.org/worg/org-contrib/babel/
