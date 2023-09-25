@@ -11,7 +11,7 @@
 
 <body>
 	<h1>Menu du Tri Express</h1>
-	<?php foreach ($sections as $section) : ?>
+		<?php foreach ($sections as $section) : ?>
 		<section>
 			<hgroup>
 				<h2><?= $section["nom"] ?></h2>

@@ -1,0 +1,29 @@
+Title: Through the desert
+
+----
+
+Text: [{"content":{"level":"h2","text":"Heading"},"id":"73a530ea-c7fb-4336-8c63-3072d249b41f","isHidden":false,"type":"heading"},{"content":{"location":"kirby","image":["file://FGX2gzKeQKzTZv2A"],"src":"","alt":"","caption":"","link":"","ratio":"","crop":"false"},"id":"414e7836-1360-4c59-a588-4da830ecb7d3","isHidden":false,"type":"image"},{"content":[],"id":"3cef65e9-3d26-4ee1-ade8-903cf4763344","isHidden":false,"type":"line"},{"content":{"text":"Citation","citation":""},"id":"61c9ef3c-09f5-4723-ae7b-fc47d1fc463d","isHidden":false,"type":"quote"}]
+
+----
+
+Subheading: 
+
+----
+
+Cover: 
+
+----
+
+Date: 2018-09-05
+
+----
+
+Author: 
+
+----
+
+Tags: sahara, desert, africa
+
+----
+
+Uuid: nFku43Ki3pyS9NyM

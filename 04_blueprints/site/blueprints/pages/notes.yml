@@ -1,0 +1,20 @@
+title: Notes
+
+columns:
+    left:
+        width: 2/3
+        sections:
+            pages:
+                type: pages
+    right:
+        width: 1/3
+        sections:
+            data:
+                type: fields
+                fields:
+                    bio:
+                        label: Biographie
+                        type: text
+                        required: true
+                    name:
+                        type: tags

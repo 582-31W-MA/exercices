@@ -1,0 +1,9 @@
+title: Note
+
+sections:
+    main:
+        type: fields
+        fields:
+            text:
+                label: Texte
+                type: blocks
