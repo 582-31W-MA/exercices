@@ -21,3 +21,11 @@ Créez un *plugin* qui permet d'intégrer le programme [SmartyPants](https://git
 ## Couleur d'accent
 
 Créez un *plugin* qui permet, à partir du tableau de bord, de choisir une couleur d'accent pour le *post*. Intégrez ensuite cette couleur d'accent dans votre thème.
+
+## Références
+
+- [Liste des filtres](https://codex.wordpress.org/Plugin_API/Filter_Reference)
+- [Liste des actions](https://codex.wordpress.org/Plugin_API/Action_Reference)
+- [Liste des *hooks*](https://developer.wordpress.org/reference/hooks/)
+- [Core APIs](https://make.wordpress.org/core/handbook/best-practices/core-apis/)
+- [Custom Meta Boxes (champs personnalisés)](https://developer.wordpress.org/plugins/metadata/custom-meta-boxes/)
